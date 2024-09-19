@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
- const ispublicRoute = createRouteMatcher(['/sing-in', '/sing-up', '/'])
+ const ispublicRoute = createRouteMatcher(['/sign-in(.*)', '/sing-up(.*)', '/'])
 
 export default clerkMiddleware((auth, req) => {
   // Restrict admin route to users with specific role
